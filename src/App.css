@@ -94,10 +94,10 @@ h1{
 }
 
  .red{
-    border-right:red 4px solid
+    border-right:rgba(255, 0, 0, 0.671) 6px solid
 }
 .green{
-    border-right:green 4px solid
+    border-right:rgba(5, 255, 5, 0.575) 6px solid
 }
 .delete{
     
