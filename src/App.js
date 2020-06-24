@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Header from './componenets/Header'
+import Balance from './componenets/Balance'
+import ExpenseDisplay from './componenets/ExpenseDisplay'
+import {History} from './componenets/History'
+import AddTransaction from './componenets/AddTransaction'
+import './App.css'
+import { GlobalProvider } from './context/GlobalContext'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+
+export default function App (){
+
+return(
+    <GlobalProvider>
+    <div className="container">
+      
+            <Header />
+            <Balance />
+            <ExpenseDisplay/>
+            <History/>
+            <AddTransaction/>
     </div>
-  );
-}
+    </GlobalProvider>
+)
 
-export default App;
+}
