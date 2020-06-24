@@ -42,6 +42,7 @@ h1{
 
 .expense-display{
     display: flex;
+    background-color: #fff;
     justify-content: space-around;
     box-shadow: rgb(122, 114, 114) 0px 0px 5px 1px;
     line-height: 0.5;
