@@ -39,5 +39,5 @@ jobs:
       run: npm install -g surge
       
     - name: deploying build to surge
-      run: surge ./build http://expense-trackerapp-bootcamp.surge.sh/ --token {{secrets.SURGE_TOKEN}}  
-      
+      run: surge ./build http://expense-trackerapp-bootcamp.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
+
