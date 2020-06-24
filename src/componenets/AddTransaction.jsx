@@ -3,12 +3,17 @@ import {GlobalContext} from '../context/GlobalContext'
 
 export default function AddTransaction() {
     const [description, setDescription] = useState('')
-    const [ammount, setAmmount] = useState()
+    const [ammount, setAmmount] = useState(0)
    
     const {addTrans} = useContext(GlobalContext)
 
     const onSubmit = e => {
        e.preventDefault();
+
+       if(ammount===0 || ammount === NaN){
+           alert('Enter Proper Value in Ammount')
+           return false;
+       }
 
        const newTransaction = {
            id: Math.abs(Math.random()*123),
@@ -16,8 +21,7 @@ export default function AddTransaction() {
            ammount: +ammount
        }
        addTrans(newTransaction)
-       setAmmount(0)
-       setDescription('')
+       
     } 
 
     return (
