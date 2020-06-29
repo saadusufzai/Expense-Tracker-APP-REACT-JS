@@ -30,13 +30,16 @@ jobs:
 
     # Runs a set of commands using the runners
     - name: GitHub Action for Yarn
-      uses: borales/actions-yarn@v2.0.0
+      uses: borales/actions-yarn@v2.3.0
+       
+# will run build
     
     - name: Yarn Build
       run: yarn build
     
     - name: installing Surge
       run: npm install -g surge
+      
       
     - name: deploying build to surge
       run: surge ./build http://expense-trackerapp-bootcamp.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
