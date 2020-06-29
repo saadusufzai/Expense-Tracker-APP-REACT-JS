@@ -10,7 +10,7 @@ export default function AddTransaction() {
     const onSubmit = e => {
        e.preventDefault();
 
-       if(ammount===0 || ammount === NaN){
+       if(ammount===0 || ammount.isNaN()){
            alert('Enter Proper Value in Ammount')
            return false;
        }
